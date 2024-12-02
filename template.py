@@ -9,13 +9,13 @@ def format_input(year, day):
     
     return lines
 
-def first_part(i):
+def first_part(puzzle_input):
     
     # code
     
     return _
 
-def second_part(i):
+def second_part(puzzle_input):
     
     # code
     
@@ -23,7 +23,7 @@ def second_part(i):
 
 if __name__ == '__main__':
     
-    i = format_input(_, _)
+    puzzle_input = format_input(_, _)
     
-    print('First part solution: ' + first_part(i))
-    print('Second part solution: ' + second_part(i))
+    print('First part solution: ' + first_part(puzzle_input))
+    print('Second part solution: ' + second_part(puzzle_input))
