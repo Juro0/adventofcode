@@ -26,7 +26,7 @@ def first_part(puzzle_input):
     result = 0
     
     # cycle the indexes of the two lists
-    for i in range(0, len(list_a)):
+    for i in range(len(list_a)):
         
         # calculate the distance between the two numbers
         result += abs(list_a[i] - list_b[i])

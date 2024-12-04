@@ -18,7 +18,7 @@ def check_report_safety(report):
     safe_level = 0
 
     # cycle the indexes of report
-    for i in range(0, len(report)):
+    for i in range(len(report)):
         
         # stop if is checking the last char
         if i == len(report)-1:
@@ -87,7 +87,7 @@ def second_part(puzzle_input):
             continue
         
         # if the report isn't safe, cycle the indexes removing one level at time (Problem Dampener)
-        for i in range(0, len(report)):
+        for i in range(len(report)):
             
             # create a copy for the report
             report_copy = report.copy()
