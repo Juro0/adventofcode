@@ -5,6 +5,7 @@ def format_input(year, day):
     with open(f'{year}/inputs/day-{day}.txt') as f:
         lines = f.readlines()
     
+    # removed \n from lines, divided using regex
     rules = [line.split('\n')[0].split('|') for line in lines if re.search('^\d+\|\d+$', line)]
     queue = [line.split('\n')[0].split(',') for line in lines if re.search('^(\d+)(,\d+)*$', line)]
     
@@ -12,12 +13,11 @@ def format_input(year, day):
 
 def validate_rule(rule, job):
     
+    # if one of the rule element isn't in the list, validate it
     if not rule[0] in job or not rule[1] in job:
         return True
     
-    rule = [int(r) for r in rule]
-    job = [int(j) for j in job]
-    
+    # check if the rule is violated
     if job.index(rule[0]) > job.index(rule[1]):
         return False
     
@@ -25,22 +25,30 @@ def validate_rule(rule, job):
 
 def first_part(puzzle_input):
     
+    # unpack the two inputs
     rules, queue = puzzle_input
     
+    # initialize the sum of the middle-terms
     result = 0
     
+    # cycle for job in the queue
     for job in queue:
-    
+        
+        # initialize the validated-rules counter
         correct = 0
     
+        # cycle for rules
         for rule in rules:
             
+            # validate the rules and increase the counter
             if validate_rule(rule, job):
         
                 correct += 1
         
+        # check if the job respect all the rules
         if correct == len(rules):
             
+            # add the middle-term value to the result
             result += int(job[ int((len(job)-1)/2) ])
         
     return str(result)
