@@ -53,8 +53,43 @@ def first_part(puzzle_input):
         
     return str(result)
 
+# !!! UNCOMPLETED
+def apply_rules(job, rules):
+    
+    pass
+
+# !!! UNCOMPLETED
+def second_part(puzzle_input):
+    
+    rules, queue = puzzle_input
+    
+    result = 0
+    
+    to_correct_queue = []
+    
+    for job in queue:
+        
+        for rule in rules:
+            
+            if not validate_rule(rule, job):
+                
+                to_correct_queue.append(job)
+
+                break
+    
+    to_correct_queue = [x for i, x in enumerate(to_correct_queue) if x not in to_correct_queue[:i]]
+    
+    for job in to_correct_queue:
+        
+        job = apply_rules(job, rules)
+        
+        result += int(job[ int((len(job)-1)/2) ])
+        
+    return str(result)
+
 if __name__ == '__main__':
     
     puzzle_input = format_input(2024, 5)
     
     print('First part solution: ' + first_part(puzzle_input))
+    print('Second part solution: ' + second_part(puzzle_input)) # !!! UNCOMPLETED
