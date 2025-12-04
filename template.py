@@ -1,4 +1,3 @@
-from _ import _
 
 def format_input(year, day):
 
@@ -11,19 +10,15 @@ def format_input(year, day):
 
 def first_part(puzzle_input):
     
-    # code
-    
-    return _
+    return 0
 
 def second_part(puzzle_input):
     
-    # code
-    
-    return _
+    return 0
 
 if __name__ == '__main__':
     
-    puzzle_input = format_input(_, _)
+    puzzle_input = format_input(0, 0)
     
-    print('First part solution: ' + first_part(puzzle_input))
-    print('Second part solution: ' + second_part(puzzle_input))
+    print(f'First part solution: {first_part(puzzle_input)}')
+    print(f'Second part solution: {second_part(puzzle_input)}')

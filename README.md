@@ -29,7 +29,7 @@ The `📂inputs` folder isn't in the repository's code, according to the Advent 
 
 Before the last step, make sure that you have created the `📂inputs` folder inside the selected year and that you have created, inside that folder, the `day-N.txt` file, containing the input of the puzzle.
 You can get your puzzle input subscribing to [Advent of Code](https://adventofcode.com/2024/events) and going to the URL `https://adventofcode.com/YEAR/day/N/input`.
-As always, `YEAR` is the year  and`N` is the day of the desired puzzle.
+As always, `YEAR` is the year and `N` is the day of the desired puzzle.
 
 ## Use of my code
 
